@@ -19,8 +19,10 @@ const contaAsHoras = setInterval(function() {
 
     document.getElementById('contador').innerHTML = `${diasAteEvento}d ${horasAteEvento}h ${minutosAteEvento}m ${segundosAteEvento}s`;
 
-    if (distanciaAteEvento - 0){
+    if (distanciaAteEvento < 0){
         clearInterval(contaAsHoras);
         document.getElementById('contador').innerHTML = 'Evento expirado!'
+    } else {
+        
     }
 }, 1000)
